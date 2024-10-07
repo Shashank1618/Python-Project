@@ -41,7 +41,6 @@ while True:
             print("Thank you for using the Personalized Adventure Guide!")
             break
 
-# except ValueError:
-#     print("Invalid input. Please enter a valid number")
+
     except  Exception as e:
         print("An error occurred: ", str(e))
