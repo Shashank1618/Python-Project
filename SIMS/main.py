@@ -33,14 +33,9 @@ class Inventory:#To manage the multiple items,separate process  We can also add
         self.items.append(Items(name,price,quantity))
 
     def updateQuantity(self,items,quantity):
-       
-       # for i in self.items:
-           # if(i.getname()==items):
-            #   self.items[self.items.indexOf(i)]=quant
-             #   print(i.displayItems())
-
+       pass
     def displayItems(self):
-        pass
+       pass
 
 inventory1=Inventory()
 inventory2=Inventory()
