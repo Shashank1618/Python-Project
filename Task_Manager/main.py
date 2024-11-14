@@ -17,7 +17,7 @@ def add_task(title,description,priority="low",deadline=None):
 
     tasks.append(task)
 
-#caliing a function or invoking a function
+#calling a function or invoking a function
 add_task("Give lab list","Name of the students present in the list","High","2024-11-13")
 
 
