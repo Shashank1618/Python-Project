@@ -12,7 +12,8 @@ def add_task(title,description,priority="low",deadline=None):
         'title':title,
         'description': description,
         'priority':priority,
-        'deadline':deadline
+        'deadline':deadline,
+        'status':'pending'
     }
 
     tasks.append(task)
@@ -42,6 +43,44 @@ def delete_task(task_index):
     else:
         removed=tasks.pop(task_index)
         print(f'Task {removed['title']} deleted')
+
+'''changing status of the task
+    marking the task as completed
+    toggle the task whether it is completed or pending
+    '''
+
+def toggleStatus(index_of_task):
+    
+    
+    if index_of_task < 0 or index_of_task >= len(tasks):
+        print("Invalid task index")
+        return
+    elif tasks[index_of_task] =='completed':
+        tasks[index_of_task] ='pending'
+    else:
+        tasks[index_of_task]='completed'
+
+
+
+"""Adding task priorities and deadline filters"""
+
+
+#iterator: Act like a loop
+def filter_by_priority(priority_level):
+    priority_level = priority_level.lower()
+    ''' filtered_tasks = [task for task in tasks if task['priority'] == priority_level]   list comprehension
+
+    filtered_tasks = []
+    for task in tasks:
+        if task['priority'] == priority_level:
+            filtered_tasks.append(task)
+    return filtered_tasks'''
+
+#lambda function:Single line function
+    filtered_task=list(filter(lambda task:task['priority'] == priority_level,tasks))
+    
+
+
 
 
 
